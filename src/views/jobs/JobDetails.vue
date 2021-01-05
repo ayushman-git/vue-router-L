@@ -2,7 +2,7 @@
   <div>
     <pre>
       <code>
-        {{ $route.params.id }}
+        {{ $route.params }}
         </code>
       </pre>
   </div>
