@@ -1,4 +1,12 @@
-<template></template>
+<template>
+  <div>
+    <pre>
+      <code>
+        {{ $route.params.id }}
+        </code>
+      </pre>
+  </div>
+</template>
 
 <script>
 export default {
