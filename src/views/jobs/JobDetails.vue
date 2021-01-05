@@ -4,6 +4,7 @@
     <h3>{{ job.id }}</h3>
     <p>{{ job.details }}</p>
   </div>
+  <div v-else>Loading</div>
 </template>
 
 <script>
