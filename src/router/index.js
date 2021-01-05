@@ -4,6 +4,7 @@ import About from "../views/About.vue";
 import NotFound from "../views/404.vue";
 import Jobs from "../views/jobs/Jobs.vue";
 import JobDetails from "../views/jobs/JobDetails.vue";
+import JobNotFound from "../views/jobs/JobNotFound.vue";
 
 const routes = [
   {
@@ -32,7 +33,6 @@ const routes = [
     path: "/all-jobs",
     redirect: "/jobs",
   },
-
   // 404
   {
     path: "/:catchAll(.*)", //catchAll is keyword (.*) is a regex pattern
