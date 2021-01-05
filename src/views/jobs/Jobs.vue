@@ -14,12 +14,22 @@ export default {
   name: "Jobs",
   data() {
     return {
-      jobs: [
-        { title: "Ninja UX Designer", id: 1, details: "lorem" },
-        { title: "Ninja Web Developer", id: 2, details: "lorem" },
-        { title: "Ninja Vue Developer", id: 3, details: "lorem" },
-      ],
+      jobs: [],
     };
+  },
+  mounted() {
+    this.fetchJobs();
+  },
+  methods: {
+    async fetchJobs() {
+      try {
+        const rawData = await fetch("http://localhost:3001/jobs");
+        const dataJson = await rawData.json();
+        this.jobs = dataJson;
+      } catch (err) {
+        console.log(err);
+      }
+    },
   },
 };
 </script>
