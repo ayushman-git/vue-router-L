@@ -4,7 +4,7 @@
     <router-link :to="{ name: 'About' }">About</router-link> |
     <router-link :to="{ name: 'Jobs' }">Jobs</router-link>
   </div>
-  <button @click="redirect">Redirect</button>
+  <button @click="redirect">Home</button>
   <button @click="back">Back</button>
   <button @click="forward">Forward</button>
   <router-view />
