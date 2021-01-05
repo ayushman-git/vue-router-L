@@ -1,11 +1,28 @@
 <template>
-  <div id="nav">
+  <div id="nav" v-if="showNav">
     <router-link :to="{ name: 'Home' }">Home</router-link> |
     <router-link :to="{ name: 'About' }">About</router-link> |
     <router-link :to="{ name: 'Jobs' }">Jobs</router-link>
   </div>
   <router-view />
 </template>
+
+<script>
+export default {
+  name: "App",
+  computed: {
+    currentRoute() {
+      return this.$route.name;
+    },
+    showNav() {
+      if (this.currentRoute == "JobDetails") {
+        return false;
+      }
+      return true;
+    },
+  },
+};
+</script>
 
 <style>
 #app {
@@ -32,5 +49,4 @@
   color: white;
   background-color: crimson;
 }
-
 </style>
