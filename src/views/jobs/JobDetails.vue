@@ -2,7 +2,7 @@
   <div>
     <pre>
       <code>
-        {{ $route.params }}
+        {{ id }} {{somethingElse}}
         </code>
       </pre>
   </div>
@@ -11,6 +11,7 @@
 <script>
 export default {
   name: "JobDetails",
+  props: ["id", "somethingElse"],
 };
 </script>
 
